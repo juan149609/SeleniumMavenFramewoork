@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Sample Test Suite" duration-ms="12408" started-at="2021-10-04T20:53:47Z" finished-at="2021-10-04T20:53:59Z">
+    <groups>
+    </groups>
+    <test name="Test Automation" duration-ms="12408" started-at="2021-10-04T20:53:47Z" finished-at="2021-10-04T20:53:59Z">
+      <class name="test.java.SampleTest">
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@e25b2fe]" name="beforeTestMethod" is-config="true" duration-ms="249" started-at="2021-10-04T15:53:47Z" finished-at="2021-10-04T15:53:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@e25b2fe]" name="beforeMethodMethod" is-config="true" duration-ms="4823" started-at="2021-10-04T15:53:47Z" finished-at="2021-10-04T15:53:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void test.java.SampleTest.registerAccountMethod()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodMethod -->
+        <test-method status="PASS" signature="registerAccountMethod()[pri:0, instance:test.java.SampleTest@e25b2fe]" name="registerAccountMethod" duration-ms="6154" started-at="2021-10-04T15:53:52Z" finished-at="2021-10-04T15:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerAccountMethod -->
+        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@e25b2fe]" name="afterMethodMethod" is-config="true" duration-ms="702" started-at="2021-10-04T15:53:58Z" finished-at="2021-10-04T15:53:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerAccountMethod status=SUCCESS method=SampleTest.registerAccountMethod()[pri:0, instance:test.java.SampleTest@e25b2fe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodMethod -->
+        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@e25b2fe]" name="afterTestMethod" is-config="true" duration-ms="466" started-at="2021-10-04T15:53:59Z" finished-at="2021-10-04T15:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+      </class> <!-- test.java.SampleTest -->
+    </test> <!-- Test Automation -->
+  </suite> <!-- Sample Test Suite -->
+</testng-results>
