@@ -23,7 +23,7 @@ public class HomePageEvents {
 		
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);//Declare and initialise a fluent wait
 		wait.pollingEvery(500,  TimeUnit.MILLISECONDS); //Here we specify the timeout of the wait
-		wait.withTimeout(2, TimeUnit.SECONDS); //We specify the polling time
+		wait.withTimeout(10, TimeUnit.SECONDS); //We specify the polling time
 		
 		wait.ignoring(NoSuchElementException.class);//Here we specify what exceptions to ignore
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageElements.signInButton))); //Here is where we specify the condition to wait on

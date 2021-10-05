@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Sample Test Suite" duration-ms="13442" started-at="2021-10-05T17:56:36Z" finished-at="2021-10-05T17:56:50Z">
+  <suite name="Sample Test Suite" duration-ms="12983" started-at="2021-10-05T20:49:31Z" finished-at="2021-10-05T20:49:44Z">
     <groups>
     </groups>
-    <test name="Test Automation" duration-ms="13442" started-at="2021-10-05T17:56:36Z" finished-at="2021-10-05T17:56:50Z">
+    <test name="Test Automation" duration-ms="12983" started-at="2021-10-05T20:49:31Z" finished-at="2021-10-05T20:49:44Z">
       <class name="test.java.SampleTest">
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeTestMethod" is-config="true" duration-ms="561" started-at="2021-10-05T10:56:36Z" finished-at="2021-10-05T10:56:37Z">
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeTestMethod" is-config="true" duration-ms="530" started-at="2021-10-05T13:49:31Z" finished-at="2021-10-05T13:49:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeMethodMethod" is-config="true" duration-ms="2117" started-at="2021-10-05T10:56:37Z" finished-at="2021-10-05T10:56:39Z">
+        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeMethodMethod" is-config="true" duration-ms="2155" started-at="2021-10-05T13:49:31Z" finished-at="2021-10-05T13:49:33Z">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method status="PASS" signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="fullTestMethod" duration-ms="9771" started-at="2021-10-05T10:56:39Z" finished-at="2021-10-05T10:56:49Z">
+        <test-method status="PASS" signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="fullTestMethod" duration-ms="9301" started-at="2021-10-05T13:49:33Z" finished-at="2021-10-05T13:49:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fullTestMethod -->
-        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterMethodMethod" is-config="true" duration-ms="591" started-at="2021-10-05T10:56:49Z" finished-at="2021-10-05T10:56:49Z">
+        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterMethodMethod" is-config="true" duration-ms="609" started-at="2021-10-05T13:49:43Z" finished-at="2021-10-05T13:49:44Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterTestMethod" is-config="true" duration-ms="201" started-at="2021-10-05T10:56:49Z" finished-at="2021-10-05T10:56:50Z">
+        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterTestMethod" is-config="true" duration-ms="191" started-at="2021-10-05T13:49:44Z" finished-at="2021-10-05T13:49:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMethod -->
