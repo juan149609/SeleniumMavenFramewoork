@@ -34,7 +34,8 @@ public class SampleTest extends BaseTest {
        homePageEvents.clickOnSearch();
        homePageEvents.searchItem();
        itemPageEvents.clickOnExit();
-       //ItemPageEvents.selectItem();
+       itemPageEvents.selectItem();
+       itemPageEvents.addToTheCart();
     }
     
 }
