@@ -23,6 +23,14 @@ public class SuiteListener implements ITestListener, IAnnotationTransformer {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+    	String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "success" + File.separator + iTestResult.getMethod().getMethodName();
+        File f = ((TakesScreenshot) BaseTest.driver).getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(f, new File(fileName + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

@@ -19,12 +19,18 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
+import main.java.utils.ExcelPropertyLoader;
+import main.java.utils.Constants;
+
 public class BaseTest {
     public static WebDriver driver;
     public ExtentHtmlReporter htmlReporter;
     public static ExtentReports extent;
     public static ExtentTest logger;
+    public static ExcelPropertyLoader excelPropertyLoader;
 
+
+    
     @BeforeTest
     public void beforeTestMethod() {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + File.separator + ("reports") + File.separator + "AutomationReport.html");
@@ -35,6 +41,9 @@ public class BaseTest {
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Automation Tester", "Andrea Diaz");
+        
+        excelPropertyLoader = new ExcelPropertyLoader();
+		excelPropertyLoader.LoadFile(Constants.ExcleFilePath);
     }
 
     @BeforeMethod
@@ -44,7 +53,7 @@ public class BaseTest {
         setupDriver(browserName);
         driver.manage().window().maximize();
         driver.get(Constants.url);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     }
 
     @AfterMethod
@@ -68,7 +77,7 @@ public class BaseTest {
         extent.flush();
     }
     
-    //@BeforeClass
+    
     public void setupDriver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
