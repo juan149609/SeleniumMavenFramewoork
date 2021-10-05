@@ -2,6 +2,7 @@ package test.java;
 
 import main.java.pageEvents.CheckoutPageEvents;
 import main.java.pageEvents.HomePageEvents;
+import main.java.pageEvents.ItemPageEvents;
 import main.java.pageEvents.MenuPageEvents;
 import main.java.pageEvents.PaymentPageEvents;
 import main.java.pageEvents.RegisterPageEvents;
@@ -15,16 +16,23 @@ public class SampleTest extends BaseTest {
     	HomePageEvents homePageEvents = new HomePageEvents();
         homePageEvents.clickOnMenu();
         
-        /*MenuPageEvents menuPageEvents = new MenuPageEvents();
+        MenuPageEvents menuPageEvents = new MenuPageEvents();
         menuPageEvents.onModalOpen();
         
         RegisterPageEvents registerPageEvents = new RegisterPageEvents();
         registerPageEvents.registerForm();
         registerPageEvents.clickOnRegister();    
-        registerPageEvents.validateRegister();*/
+        registerPageEvents.validateRegister();
+        
+        ItemPageEvents ItemPageEvents = new ItemPageEvents();
+        ItemPageEvents.clickOnSearch();
+        ItemPageEvents.searchingItems();
+        ItemPageEvents.clickOnItem();      
+        ItemPageEvents.clickOnAddMore();
+        ItemPageEvents.clickOnAddToCart();
+        
         
         CheckoutPageEvents checkoutPageEvents = new CheckoutPageEvents();
-        checkoutPageEvents.loginMethod();
         checkoutPageEvents.clickOnCart();
         checkoutPageEvents.clickOnCheckout();
         checkoutPageEvents.clickOnNext();

@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Sample Test Suite" duration-ms="56578" started-at="2021-10-05T02:59:28Z" finished-at="2021-10-05T03:00:25Z">
+  <suite name="Sample Test Suite" duration-ms="69289" started-at="2021-10-05T16:24:09Z" finished-at="2021-10-05T16:25:18Z">
     <groups>
     </groups>
-    <test name="Test Automation" duration-ms="56578" started-at="2021-10-05T02:59:28Z" finished-at="2021-10-05T03:00:25Z">
+    <test name="Test Automation" duration-ms="69289" started-at="2021-10-05T16:24:09Z" finished-at="2021-10-05T16:25:18Z">
       <class name="test.java.SampleTest">
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@271053e1]" name="beforeTestMethod" is-config="true" duration-ms="172" started-at="2021-10-04T21:59:28Z" finished-at="2021-10-04T21:59:28Z">
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeTestMethod" is-config="true" duration-ms="546" started-at="2021-10-05T09:24:09Z" finished-at="2021-10-05T09:24:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@271053e1]" name="beforeMethodMethod" is-config="true" duration-ms="4001" started-at="2021-10-04T21:59:28Z" finished-at="2021-10-04T21:59:32Z">
+        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeMethodMethod" is-config="true" duration-ms="2185" started-at="2021-10-05T09:24:09Z" finished-at="2021-10-05T09:24:12Z">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method status="SKIP" signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@271053e1]" name="fullTestMethod" duration-ms="10420" started-at="2021-10-04T21:59:32Z" finished-at="2021-10-04T21:59:43Z">
-          <exception class="java.lang.NoSuchFieldError">
+        <test-method status="SKIP" signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="fullTestMethod" duration-ms="18971" started-at="2021-10-05T09:24:12Z" finished-at="2021-10-05T09:24:31Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[excelPropertyLoader]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='paymentMethod']/div/div[1]/div[1]/input (tried for 10 second(s) with 250 MILLISECONDS interval)
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'JULIO', ip: '192.168.100.147', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchFieldError: excelPropertyLoader
-	at main.java.pageEvents.CheckoutPageEvents.loginMethod(CheckoutPageEvents.java:28)
-	at test.java.SampleTest.fullTestMethod(SampleTest.java:27)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='paymentMethod']/div/div[1]/div[1]/input (tried for 10 second(s) with 250 MILLISECONDS interval)
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'JULIO', ip: '192.168.100.147', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at main.java.pageEvents.PaymentPageEvents.paymentSelection(PaymentPageEvents.java:33)
+	at test.java.SampleTest.fullTestMethod(SampleTest.java:41)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -62,22 +70,22 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchFieldError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fullTestMethod -->
-        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@271053e1]" name="afterMethodMethod" is-config="true" duration-ms="676" started-at="2021-10-04T21:59:43Z" finished-at="2021-10-04T21:59:43Z">
+        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterMethodMethod" is-config="true" duration-ms="601" started-at="2021-10-05T09:24:31Z" finished-at="2021-10-05T09:24:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=fullTestMethod status=SKIP method=SampleTest.fullTestMethod()[pri:0, instance:test.java.SampleTest@271053e1] output={null}]]]>
+                <![CDATA[[TestResult name=fullTestMethod status=SKIP method=SampleTest.fullTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@271053e1]" name="beforeMethodMethod" is-config="true" duration-ms="16910" started-at="2021-10-04T21:59:43Z" finished-at="2021-10-04T22:00:00Z">
+        <test-method status="PASS" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="beforeMethodMethod" is-config="true" duration-ms="1701" started-at="2021-10-05T09:24:31Z" finished-at="2021-10-05T09:24:33Z">
           <params>
             <param index="0">
               <value>
@@ -93,15 +101,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method status="FAIL" signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@271053e1]" name="fullTestMethod" duration-ms="23213" started-at="2021-10-04T22:00:00Z" finished-at="2021-10-04T22:00:24Z">
-          <exception class="java.lang.NoSuchFieldError">
+        <test-method status="FAIL" signature="fullTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="fullTestMethod" duration-ms="44254" started-at="2021-10-05T09:24:33Z" finished-at="2021-10-05T09:25:17Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[excelPropertyLoader]]>
+              <![CDATA[Registration failed expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchFieldError: excelPropertyLoader
-	at main.java.pageEvents.CheckoutPageEvents.loginMethod(CheckoutPageEvents.java:28)
-	at test.java.SampleTest.fullTestMethod(SampleTest.java:27)
+              <![CDATA[java.lang.AssertionError: Registration failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at main.java.pageEvents.RegisterPageEvents.validateRegister(RegisterPageEvents.java:113)
+	at test.java.SampleTest.fullTestMethod(SampleTest.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,22 +139,22 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchFieldError -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fullTestMethod -->
-        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@271053e1]" name="afterMethodMethod" is-config="true" duration-ms="652" started-at="2021-10-04T22:00:24Z" finished-at="2021-10-04T22:00:24Z">
+        <test-method status="PASS" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterMethodMethod" is-config="true" duration-ms="605" started-at="2021-10-05T09:25:17Z" finished-at="2021-10-05T09:25:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=fullTestMethod status=FAILURE method=SampleTest.fullTestMethod()[pri:0, instance:test.java.SampleTest@271053e1] output={null}]]]>
+                <![CDATA[[TestResult name=fullTestMethod status=FAILURE method=SampleTest.fullTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@271053e1]" name="afterTestMethod" is-config="true" duration-ms="305" started-at="2021-10-04T22:00:24Z" finished-at="2021-10-04T22:00:25Z">
+        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:test.java.SampleTest@6eebc39e]" name="afterTestMethod" is-config="true" duration-ms="188" started-at="2021-10-05T09:25:18Z" finished-at="2021-10-05T09:25:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMethod -->

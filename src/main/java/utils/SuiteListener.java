@@ -23,7 +23,7 @@ public class SuiteListener implements ITestListener, IAnnotationTransformer {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-    	String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "success" + File.separator + iTestResult.getMethod().getMethodName();
+    	String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "passed" + File.separator + iTestResult.getMethod().getMethodName();
         File f = ((TakesScreenshot) BaseTest.driver).getScreenshotAs(OutputType.FILE);
 
         try {
@@ -36,7 +36,7 @@ public class SuiteListener implements ITestListener, IAnnotationTransformer {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + iTestResult.getMethod().getMethodName();
+        String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "failed" + File.separator + iTestResult.getMethod().getMethodName();
         File f = ((TakesScreenshot) BaseTest.driver).getScreenshotAs(OutputType.FILE);
 
         try {
