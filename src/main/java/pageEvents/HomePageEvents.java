@@ -16,7 +16,7 @@ import test.java.BaseTest;
 
 
 public class HomePageEvents {
-
+	//Test cases
     public void clickOnMenu() { 
 		ElementFetch elementFetch = new ElementFetch();
 		BaseTest.logger.info("Clicking the menu icon");//The specific test info for the report

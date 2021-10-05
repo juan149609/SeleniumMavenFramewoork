@@ -41,7 +41,7 @@ public class CheckoutPageEvents {
 		elementFetch.getWebElement("XPATH", CheckoutPageElements.chBtn).click();
 		
 	}*/
-	
+	//Test cases
 	public void clickOnCart() {
     	BaseTest.logger.info("Clicking Menu Cart");
     

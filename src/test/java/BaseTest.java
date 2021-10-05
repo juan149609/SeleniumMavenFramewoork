@@ -30,7 +30,7 @@ public class BaseTest {
     public static ExcelPropertyLoader excelPropertyLoader;
 
 
-    
+    //Here we will be generating the testing report
     @BeforeTest
     public void beforeTestMethod() {
         htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + File.separator + ("reports") + File.separator + "AutomationReport.html");
@@ -47,15 +47,15 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    @Parameters(value = {"browserName"})
+    @Parameters(value = {"browserName"})//Parameter annotation where we pass the browser name
     public void beforeMethodMethod(String browserName, Method testMethod) {
         logger = extent.createTest(testMethod.getName());
         setupDriver(browserName);
         driver.manage().window().maximize();
-        driver.get(Constants.url);
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        driver.get(Constants.url);//We pass the url that we need to open to do the testing
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
-
+    //Here we will be adding the testing status to our report, Method Name, Failed, Passed.
     @AfterMethod
     public void afterMethodMethod(ITestResult result) {
         if (result.getStatus() == ITestResult.SUCCESS) {
@@ -71,13 +71,13 @@ public class BaseTest {
         }
         driver.quit();
     }
-
+    //Here we will be flushing out our testing report
     @AfterTest
     public void afterTestMethod() {
         extent.flush();
     }
     
-    
+    //Here we initialize our web driver (chrome, fireFox, etc)
     public void setupDriver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");

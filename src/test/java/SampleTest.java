@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 public class SampleTest extends BaseTest {
 	
+	//Full Test Cases
    @Test
     public void fullTestMethod() { 
     	HomePageEvents homePageEvents = new HomePageEvents();
@@ -38,9 +39,10 @@ public class SampleTest extends BaseTest {
         checkoutPageEvents.clickOnNext();
         
         PaymentPageEvents paymentPageEvents = new PaymentPageEvents();
-        paymentPageEvents.paymentSelection();
+        //paymentPageEvents.paymentSelection();
         paymentPageEvents.paymentUserAndPass();
         paymentPageEvents.clickOnPayButton();
+        paymentPageEvents.validatingOrder();
     }
     
 }

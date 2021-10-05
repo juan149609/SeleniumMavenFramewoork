@@ -1,6 +1,7 @@
 package main.java.pageObjects;
 
 public interface RegisterPageElements {
+	//Identifiers
 	String registerUsername = "//*[@id=\'formCover\']/div[1]/div[1]/sec-view[1]/div/input";
     String registerEmail = "//*[@id=\'formCover\']/div[1]/div[1]/sec-view[2]/div/input"; 
     String registerPassword = "//*[@id=\'formCover\']/div[1]/div[2]/sec-view[1]/div/input";

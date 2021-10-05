@@ -20,7 +20,8 @@ public class SuiteListener implements ITestListener, IAnnotationTransformer {
     public void onTestStart(ITestResult iTestResult) {
 
     }
-
+    
+    //Here we will be generating a success folder and a screenshot when the test passed 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
     	String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "passed" + File.separator + iTestResult.getMethod().getMethodName();
@@ -33,7 +34,8 @@ public class SuiteListener implements ITestListener, IAnnotationTransformer {
         }
 
     }
-
+    
+  //Here we will be generating a failed folder and a screenshot when the test failed 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         String fileName = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "failed" + File.separator + iTestResult.getMethod().getMethodName();
@@ -65,7 +67,7 @@ public class SuiteListener implements ITestListener, IAnnotationTransformer {
     public void onFinish(ITestContext iTestContext) {
 
     }
-
+    //This method is implemented by the class RetryAnaliser
     @Override
     public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
         iTestAnnotation.setRetryAnalyzer(RetryAnalyser.class);
