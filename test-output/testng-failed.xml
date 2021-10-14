@@ -11,4 +11,18 @@
       <class name="test.java.SampleTest"/>
     </classes>
   </test> <!-- Test Automation -->
+  <test name="Test Automation(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="test.java.SampleTest">
+        <methods>
+          <include name="afterMethodMethod"/>
+          <include name="afterTestMethod"/>
+          <include name="beforeMethodMethod"/>
+          <include name="fullTestMethod"/>
+          <include name="beforeTestMethod"/>
+        </methods>
+      </class> <!-- test.java.SampleTest -->
+    </classes>
+  </test> <!-- Test Automation(failed) -->
 </suite> <!-- Failed suite [Sample Test Suite] -->
