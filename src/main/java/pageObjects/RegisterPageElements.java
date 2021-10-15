@@ -18,4 +18,5 @@ public interface RegisterPageElements {
     
     String registerAgree = "//*[@id=\'formCover\']/sec-view/div/label";
     String registerButton = "//*[@id=\'register_btnundefined\']";
+    String IsAlreadyRestiredLabel ="//*[@id='registerPage']/article/sec-form/div[2]/label[1]";
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Sample Test Suite]">
+<suite name="Failed suite [Sample Test Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browserName" value="chrome"/>
   <listeners>
     <listener class-name="main.java.utils.SuiteListener"/>
@@ -11,4 +11,18 @@
       <class name="test.java.SampleTest"/>
     </classes>
   </test> <!-- Test Automation -->
+  <test name="Test Automation(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="test.java.SampleTest">
+        <methods>
+          <include name="afterMethodMethod"/>
+          <include name="afterTestMethod"/>
+          <include name="beforeMethodMethod"/>
+          <include name="fullTestMethod"/>
+          <include name="beforeTestMethod"/>
+        </methods>
+      </class> <!-- test.java.SampleTest -->
+    </classes>
+  </test> <!-- Test Automation(failed) -->
 </suite> <!-- Failed suite [Sample Test Suite] -->

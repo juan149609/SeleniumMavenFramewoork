@@ -6,8 +6,9 @@
     </listeners>
     <test name="Test Automation">
         <parameter name="browserName" value="chrome"/>
-        <classes>
+        <classes> 
             <class name="test.java.SampleTest"/>
+        
         </classes>
     </test>
 </suite>

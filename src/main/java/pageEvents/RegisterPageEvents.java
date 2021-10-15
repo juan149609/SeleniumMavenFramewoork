@@ -81,23 +81,47 @@ public class RegisterPageEvents {
     	
     }
 
-    public void clickOnRegister() {    	
-    	BaseTest.logger.info("Clicking Register Button");
+    public int clickOnRegister() {    	
+    
     	ElementFetch elementFetch = new ElementFetch();		
-		
     	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		wait.pollingEvery(500,  TimeUnit.MILLISECONDS);
 		wait.withTimeout(10, TimeUnit.SECONDS);
-		
-		wait.ignoring(NoSuchElementException.class);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerAgree)));
-		elementFetch.getWebElement("XPATH", RegisterPageElements.registerAgree).click();
+			
+		FluentWait<WebDriver> wait2 = new FluentWait<WebDriver>(driver);
+		wait2.pollingEvery(200,  TimeUnit.MILLISECONDS);
+		wait2.withTimeout(2, TimeUnit.SECONDS);
 		
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(HomePageElements.loader)));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerButton)));
+	try {
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerButton).click();
-    	
+		BaseTest.logger.info("Clicking Register Button");
+	}catch(Exception e) {
+		return 1;
+	}
+	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RegisterPageElements.IsAlreadyRestiredLabel)));
+	try {	
+	elementFetch.getWebElement("XPATH", RegisterPageElements.IsAlreadyRestiredLabel).getText();
+	BaseTest.logger.info("Clicking Agree Button");
+	}catch(Exception f) {
+		return 2;
+		}
+	return 0;
     }
+    public void clickOnRegisterAgree() { 
+    	BaseTest.logger.info("Clicking Register Agree");
+    ElementFetch elementFetch = new ElementFetch();			
+    FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+	wait.pollingEvery(500,  TimeUnit.MILLISECONDS);
+	wait.withTimeout(10, TimeUnit.SECONDS);
+	
+    wait.ignoring(NoSuchElementException.class);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerAgree)));
+
+	elementFetch.getWebElement("XPATH", RegisterPageElements.registerAgree).click();
+    }
+    
     
     public void validateRegister() {
     	BaseTest.logger.info("Validate Register");	
