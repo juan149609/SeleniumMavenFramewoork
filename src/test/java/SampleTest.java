@@ -27,48 +27,10 @@ public class SampleTest extends BaseTest {
         homePageEvents.clickOnMenu();
               
         menuPageEvents.onModalOpen();
-        Click_AcceptConditions_TC12();
-        Click_RegisterCheck_TC13_TC14();
-        Validate_Registration_TC15();
+        registerPageEvents.clickOnRegisterAgree();
+        registerPageEvents.clickOnRegister();
+        registerPageEvents.validateRegister();
     }
     
-  
-   public void Click_AcceptConditions_TC12() { 
-
-       registerPageEvents.registerForm();
-	   try {	   
-	   registerPageEvents.clickOnRegisterAgree();
-	   }
-	   catch(Exception e){
-	   Assert.fail("Fail On Agremment Click");  
-	   }
-   }
-   
-   
-   public void Click_RegisterCheck_TC13_TC14() {
-	  int ErrorMessage;	 
-		 ErrorMessage=registerPageEvents.clickOnRegister();
-		  switch(ErrorMessage) {
-		  case 0:
-			   
-		  case 1:	
-			  Assert.fail("Fail On Click Register");
-		  case 2:
-			  Assert.fail("Fail On Click Agree");
-			  default :
-		  } 
-   }
-   
-
-  
-   public void Validate_Registration_TC15() { 
-	   
-	   try {
-	   registerPageEvents.validateRegister();
-	   }
-	   catch(Exception e) {
-		   Assert.fail("Fail On Validate Register"); 
-	   }
-   }
 }
 

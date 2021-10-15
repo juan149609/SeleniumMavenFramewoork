@@ -81,7 +81,7 @@ public class RegisterPageEvents {
     	
     }
 
-    public int clickOnRegister() {    	
+    public void clickOnRegister() {    	
     
     	ElementFetch elementFetch = new ElementFetch();		
     	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
@@ -98,18 +98,19 @@ public class RegisterPageEvents {
 		elementFetch.getWebElement("XPATH", RegisterPageElements.registerButton).click();
 		BaseTest.logger.info("Clicking Register Button");
 	}catch(Exception e) {
-		return 1;
+		  Assert.fail("Fail On Click Register");
 	}
 	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RegisterPageElements.IsAlreadyRestiredLabel)));
 	try {	
 	elementFetch.getWebElement("XPATH", RegisterPageElements.IsAlreadyRestiredLabel).getText();
 	BaseTest.logger.info("Clicking Agree Button");
 	}catch(Exception f) {
-		return 2;
+		Assert.fail("Fail On Click Agree");
 		}
-	return 0;
+	
     }
     public void clickOnRegisterAgree() { 
+    	try {
     	BaseTest.logger.info("Clicking Register Agree");
     ElementFetch elementFetch = new ElementFetch();			
     FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
@@ -120,7 +121,11 @@ public class RegisterPageEvents {
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RegisterPageElements.registerAgree)));
 
 	elementFetch.getWebElement("XPATH", RegisterPageElements.registerAgree).click();
-    }
+    	    }
+    	catch(Exception e){
+		   Assert.fail("Fail On Agremment Click");  
+		   }
+     }
     
     
     public void validateRegister() {
@@ -133,7 +138,6 @@ public class RegisterPageEvents {
 		
 		wait.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(HomePageElements.loader)));
-		
 		Assert.assertTrue(elementFetch.getListWebElements("XPATH", HomePageElements.userAccountName).size()>0, "Registration failed");
     }
 }
